@@ -1,0 +1,11 @@
+targets = [ "//Pcap++:Pcap++" ]
+
+[[dependency]]
+package = "github.com/buckaroo-pm/host-pcap"
+version = "branch=master"
+private = true
+
+[[dependency]]
+package = "github.com/buckaroo-pm/host-pthread"
+version = "branch=master"
+private = true

@@ -1,0 +1,34 @@
+load('//:buckaroo_macros.bzl', 'buckaroo_deps')
+load('//:subdir_glob.bzl', 'subdir_glob')
+
+linux_pp_flags = [
+  '-I/usr/include/netinet',
+  '-DLINUX=1',
+]
+
+macos_pp_flags = [
+  '-I/usr/include/netinet',
+  '-DMAC_OS_X=1',
+]
+
+cxx_library(
+  name = 'Packet++',
+  header_namespace = '',
+  exported_headers = subdir_glob([
+    ('header', '**/*.h'),
+  ]),
+  platform_preprocessor_flags = [
+    ('linux.*', linux_pp_flags),
+    ('macos.*', macos_pp_flags),
+  ],
+  srcs = glob([
+    'src/**/*.cpp',
+  ]),
+  deps = [
+    '//Common++:Common++',
+    '//3rdParty/EndianPortable:endian'
+  ] + buckaroo_deps(),
+  visibility = [
+    'PUBLIC',
+  ],
+)

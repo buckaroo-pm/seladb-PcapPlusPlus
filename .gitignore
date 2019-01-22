@@ -66,3 +66,10 @@ Tests/Pcap++Test/cUrl/curl_output.txt
 #Tutorial outputs
 Examples/Tutorials/**/Makefile
 Examples/Tutorials/**/*.exe
+
+.buckd
+buck-out
+.buckconfig.local
+.buckconfig.d
+buckaroo
+buckaroo_macros.bzl

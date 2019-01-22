@@ -1,0 +1,17 @@
+manifest = "d508386d845e6c2f93ca3d8fad5b7e7e0ec2c22e1abec9376daed388d40d94fc"
+
+[[dependency]]
+package = "github.com/buckaroo-pm/host-pcap"
+target = "//:pcap"
+
+[[dependency]]
+package = "github.com/buckaroo-pm/host-pthread"
+target = "//:pthread"
+
+[lock."github.com/buckaroo-pm/host-pcap"]
+versions = [ "branch=master" ]
+revision = "a01f4dd799821e70b82da9b3a26afccfd460d4d3"
+
+[lock."github.com/buckaroo-pm/host-pthread"]
+versions = [ "branch=master" ]
+revision = "a62519aa69c8e3243d6065fbf4c1d2de072f86f6"

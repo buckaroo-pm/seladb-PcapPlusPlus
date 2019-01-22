@@ -1,0 +1,9 @@
+cxx_binary(
+  name = 'Arping',
+  srcs = [
+    'main.cpp',
+  ],
+  deps = [
+    '//Pcap++:Pcap++',
+  ],
+)

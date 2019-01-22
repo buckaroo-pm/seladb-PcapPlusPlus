@@ -1,0 +1,11 @@
+prebuilt_cxx_library(
+  name = 'endian',
+  header_namespace = '',
+  header_only = True,
+  exported_headers = {
+    'EndianPortable.h': 'include/EndianPortable.h',
+  },
+  visibility = [
+    'PUBLIC',
+  ],
+)
